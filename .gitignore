@@ -21,4 +21,4 @@ screenshots/
 .DS_Store
 
 # Java
-*.class
+*.classtest-output/ 
