@@ -1,77 +1,51 @@
 # 🚀 Automation Framework (UI + API + DB)
 
-## 📌 Overview
+📌 Overview
 
-This project demonstrates a hybrid automation framework built using Selenium WebDriver, TestNG, and RestAssured.
-It covers end-to-end validation across UI, API, and database layers.
+This project demonstrates a hybrid automation framework built using Selenium WebDriver, TestNG, and Rest Assured, designed to validate applications across UI, API, and database layers.
+It follows real-world automation practices with a focus on scalability, maintainability, and layered testing.
 
----
+🛠 Tech Stack
+Java
+Selenium WebDriver
+TestNG
+Rest Assured
+Maven
+Log4j2 (Logging)
+Extent Reports (Reporting)
+JDBC (Database validation concept)
+🏗 Framework Design
+Page Object Model (POM)
+ThreadLocal WebDriver for parallel execution
+Config-driven setup using properties file
+Reusable utility classes (WaitUtils, TestDataUtil)
+TestNG Listeners for reporting and execution control
+✅ Key Features
+UI Automation using ParaBank application
+Positive and negative test scenarios
+Parallel execution using TestNG
+Cross-browser testing (Chrome, Edge)
+API validation using Rest Assured
+Database validation layer (conceptual implementation)
+Screenshot capture on failure
+Logging using Log4j2
+🔄 Test Flow
 
-## 🛠 Tech Stack
+UI → API → Database (layered validation approach)
 
-* Java
-* Selenium WebDriver
-* TestNG
-* RestAssured
-* Maven
-* Log4j2 (Logging)
-* Extent Reports (Reporting)
-* JDBC (Database layer concept)
+▶️ How to Run
+Clone the repository
+Import as a Maven project
+Execute tests using testng.xml
+📊 Reports
+Extent Reports generated after execution
+Screenshots captured for failed test cases
+⚠️ Note
 
----
+API and database validations are implemented as conceptual demonstrations, as the ParaBank application is publicly accessible without direct database connectivity.
 
-## 🏗 Framework Design
+💡 Key Learning
 
-* Page Object Model (POM)
-* ThreadLocal WebDriver for parallel execution
-* Config-driven setup using properties file
-* Utility classes (WaitUtils, TestDataUtil)
-* Listener-based reporting (TestNG Listeners)
-
----
-
-## ✅ Features
-
-* UI Automation (ParaBank application)
-* Positive and Negative test scenarios
-* Parallel execution using TestNG
-* Cross-browser testing (Chrome, Edge)
-* API validation using RestAssured
-* Database validation layer (conceptual implementation)
-* Screenshot capture on failure
-* Logging using Log4j2
-
----
-
-## 🔄 Test Flow
-
-UI → API → DB (conceptual validation)
-
----
-
-## ▶️ How to Run
-
-1. Clone the repository
-2. Import as Maven project
-3. Run using `testng.xml`
-
----
-
-## 📊 Reports
-
-* Extent Reports generated after execution
-* Screenshots captured for failed tests
-
----
-
-## ⚠️ Note
-
-* API and DB validations are demonstrated conceptually since ParaBank is a public application without direct DB access
-
----
-
-## 💡 Key Learning
-
-This project focuses on building a scalable, maintainable automation framework with real-world design practices.
+This project focuses on building a scalable, maintainable, and enterprise-style automation framework, incorporating layered validation across UI, API, and backend concepts.
 
 ---
