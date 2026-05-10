@@ -1,20 +1,17 @@
 package api;
 
 import config.ConfigReader;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class CustomerAPI {
 
-	public static Response getCustomerDetails(String username) {
-		return RestAssured
-				.given()
-				.baseUri(ConfigReader.get("apiBaseUrl"))
-				.when()
-				.get("/customers/"+username)
-				.then()
-				.extract()
-				.response();
-		
-	}
+	private static final String BASE_URL =
+	        ConfigReader.get("bankApiBaseUrl");
+
+    public static Response getCustomerDetails(String customerId) {
+
+        return ApiClient.get(
+                BASE_URL,
+                "/customers/" + customerId);
+    }
 }

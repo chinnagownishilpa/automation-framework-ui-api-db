@@ -1,49 +1,93 @@
-# 🚀 Automation Framework (UI + API + DB)
+# Automation Framework - UI API DB
 
-📌 Overview
+Enterprise-level automation framework developed using Selenium, Java, TestNG, RestAssured, Maven, and Extent Reports.
 
-This project demonstrates a hybrid automation framework built using Selenium WebDriver, TestNG, and Rest Assured, designed to validate applications across UI, API, and database layers.
-It follows real-world automation practices with a focus on scalability, maintainability, and layered testing.
+## Tech Stack
 
-🛠 Tech Stack
-Java
-Selenium WebDriver
-TestNG
-Rest Assured
-Maven
-Log4j2 (Logging)
-Extent Reports (Reporting)
-JDBC (Database validation concept)
-🏗 Framework Design
-Page Object Model (POM)
-ThreadLocal WebDriver for parallel execution
-Config-driven setup using properties file
-Reusable utility classes (WaitUtils, TestDataUtil)
-TestNG Listeners for reporting and execution control
-✅ Key Features
-UI Automation using ParaBank application
-Positive and negative test scenarios
-Parallel execution using TestNG
-Cross-browser testing (Chrome, Edge)
-API validation using Rest Assured
-Database validation layer (conceptual implementation)
-Screenshot capture on failure
-Logging using Log4j2
-🔄 Test Flow
+- Java 17
+- Selenium WebDriver
+- TestNG
+- RestAssured
+- Maven
+- Extent Reports
+- Apache POI
+- JDBC
+- GitHub
+- Jenkins Ready
 
-UI → API → Database (layered validation approach)
+---
 
-▶️ How to Run
-Clone the repository
-Import as a Maven project
-Execute tests using testng.xml
-📊 Reports
-Extent Reports generated after execution
-Screenshots captured for failed test cases
-⚠️ Note
+## Framework Features
 
-API and database validations are implemented as conceptual demonstrations, as the ParaBank application is publicly accessible without direct database connectivity.
+### UI Automation
+- Page Object Model (POM)
+- Data-Driven Testing using Excel
+- Retry Analyzer
+- Screenshot Capture
+- Wait Utilities
+- Parallel Execution Support
 
-💡 Key Learning
+### API Automation
+- CRUD API Testing
+- API Chaining
+- Auth Token Generation
+- JSON Schema Validation
+- POJO Request Models
+- Request/Response Reusable Utilities
 
-This project focuses on building a scalable, maintainable, and enterprise-style automation framework, incorporating layered validation across UI, API, and backend concepts.
+### Reporting
+- Extent Reports
+- Console Logging
+- Failure Screenshots
+
+### Framework Utilities
+- DriverFactory
+- ConfigReader
+- Listener Architecture
+- Maven Surefire Execution
+- Parallel TestNG Suites
+
+---
+
+## Project Structure
+
+src/main/java
+- api
+- builders
+- config
+- database
+- factory
+- listeners
+- reporting
+- utils
+
+src/test/java
+- tests.ui
+- tests.api
+- dataproviders
+
+---
+
+## Execution
+
+### Run API Suite
+
+```bash
+mvn test -DsuiteXmlFile=apitestng.xml
+
+### Run UI Suite
+mvn test -DsuiteXmlFile=testng.xml
+
+## Reports
+
+Extent reports are generated under:
+reports/
+
+### CI/CD
+
+Framework is Jenkins-ready with Maven execution support.
+
+Author
+
+Shilpa
+QA Automation Engineer

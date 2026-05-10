@@ -13,6 +13,7 @@ import Utils.DBUtils;
 import Utils.TestDataUtil;
 import io.restassured.response.Response;
 import pages.HomePage;
+import pages.LoginPage;
 import pages.RegisterPage;
 import api.CustomerAPI;
 
@@ -29,19 +30,6 @@ public class RegisterTest extends BaseTest{
 		
 		String username=TestDataUtil.getRandomUsername();
 		
-		
-//		registerPage.enterFirstName("Shilpa");
-//		registerPage.enterLastName("Reddy");
-//		registerPage.enterAddress("Bangalore");
-//		registerPage.enterCity("Bangalore");
-//		registerPage.enterState("KA");
-//		registerPage.enterZipCode("560001");
-//		registerPage.enterPhone("9876543210");
-//		registerPage.enterSSN("12345");
-//
-//		registerPage.enterUsername(username);
-//		registerPage.enterPassword("password");
-//		registerPage.enterConfirmPassword("password");
 		
 	    registerPage.registerUser(
 	            "Shilpa",
@@ -80,5 +68,11 @@ public class RegisterTest extends BaseTest{
 //	    
 //	    Assert.assertTrue(userExists, "User not found in DB");
 	    System.out.println("DB validation skipped (no access)");
+	    
+	    LoginPage loginPage = new LoginPage();
+
+	    Assert.assertTrue(
+	            loginPage.isLogoutDisplayed(),
+	            "Login Failed");
 	}
 }
